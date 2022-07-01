@@ -1,5 +1,11 @@
-## MICI
-   - The derived MICI biomarker has comparable predicition performance as the ensembling model, is strongly associated with brain damage, clinical symptoms, and expressions profile (interpretable). Our platform collectively highlights a highly shareable and interpretable framework to support clinicians in the neuroimage classification diagnosis of schizophrenia. Besides, we developed an online model share platform to promote the generalization of MICI and provide free individual prediction services (http://micc.tmu.edu.cn/mici/index.html). 
+
+![mici](https://user-images.githubusercontent.com/107779317/176856534-4b2a5822-05a4-4f66-89a7-4119cbc1e5a1.png)
+
+
+## MICI(Morphometric Integrated Classification Index)
+   -    Morphometric Integrated Classification Index (MICI) is a neuroimaging bimarker developed based on multi-site classification models using structural magnetic resonance imaging (sMRI) data ^1. It is calculated using the SHapley Additive exPlanation (SHAP) method^2, which is based on the cooperative game theory ^3 that measures the average marginal contribution of a feature value to the prediction across the total set of feature vectors ^2. In mathematics, SHAP applies a linear additive model to split the final prediction of  a classification model into individual additive contributions (SHAP values) for each valid feature. For a classification model, the relation between prediction probability and SHAP values can be expressed as the following equation:
+logit(P_m)=S_0+ sum_{f=1}^F S_f X_f                    [1]   -    
+   -          Besides, we developed an online model share platform to promote the generalization of MICI and provide free individual prediction services (http://micc.tmu.edu.cn/mici/index.html). 
        
    - Please note some component score of MICI contains specific license or usage constraints for non-academic usage. MICI does not grant the non-academic usage of those scores, so please contact the original score/method providers for proper usage purpose.  
  
