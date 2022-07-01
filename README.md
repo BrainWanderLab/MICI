@@ -1,6 +1,7 @@
 # MICI(Morphometric Integrated Classification Index)
+![mici1](https://user-images.githubusercontent.com/107779317/176885585-a967a5c1-d56f-4db9-becc-27e97f568294.png)
 
-![mici](https://user-images.githubusercontent.com/107779317/176856534-4b2a5822-05a4-4f66-89a7-4119cbc1e5a1.png)  
+ 
 ## 1.Theory
 
 Morphometric Integrated Classification Index (MICI) is a neuroimaging bimarker developed based on multi-site classification models using structural magnetic resonance imaging (sMRI) data$^1$. It is calculated using the SHapley Additive exPlanation (SHAP) method, which is based on the cooperative game theory$^2$ that measures the average marginal contribution of a feature value to the prediction across the total set of feature vectors$^3$. In mathematics, SHAP applies a linear additive model to split the final prediction of a classification model into individual additive contributions (SHAP values) for each valid feature. For a classification model, the relation between prediction probability and SHAP values can be expressed as the following equation:  
@@ -61,6 +62,10 @@ Besides the offline package mentioned above, we also developed an online free-sh
 Users can upload the preprocessed features. Then it outputs the diagnostic probability for each subject, the MICI of each subject, and the MICI of each feature of each subject. The correlations between the MICI and clinical symptoms were also available.
 ### _Model Ensembling_:
 Users can train the model off-line and upload their trained model, the performance of the uploaded model based on the public data samples will be used to evaluate the QC of the uploaded model, and the ensembled performance after added the uploaded model into the whole model set will be shown.
+
+
+![mici_web](https://user-images.githubusercontent.com/107779317/176883220-be284e53-0c24-4aa7-a0d7-492425467651.JPG)
+
 
 ## Copyright
 Copyright (c) BrainWanderLab@Tianjin Medical University 2018-2022. All rights reserved.
