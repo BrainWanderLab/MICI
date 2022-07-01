@@ -1,5 +1,5 @@
 ## MICI
-   - The derived MICI biomarker has comparable predicition performance as the ensembling model, is strongly associated with brain damage, clinical symptoms, and expressions profile (interpretable). Our platform collectively highlights a highly shareable and interpretable framework to support clinicians in the neuroimage classification diagnosis of schizophrenia. Besides, we developed an online model share platform to promote the generalization of MICI and provide free individual prediction services (http://micc.tmu.edu.cn/mise/index.html). 
+   - The derived MICI biomarker has comparable predicition performance as the ensembling model, is strongly associated with brain damage, clinical symptoms, and expressions profile (interpretable). Our platform collectively highlights a highly shareable and interpretable framework to support clinicians in the neuroimage classification diagnosis of schizophrenia. Besides, we developed an online model share platform to promote the generalization of MICI and provide free individual prediction services (http://micc.tmu.edu.cn/mici/index.html). 
        
    - Please note some component score of MICI contains specific license or usage constraints for non-academic usage. MICI does not grant the non-academic usage of those scores, so please contact the original score/method providers for proper usage purpose.  
  
@@ -52,7 +52,7 @@ If you have trained your models, you can use the script to calculate MICI based 
 
 **Notes**
 <blockquote>
-If you want to calculate MICI using multi-models, you can upload your model and extracted features to our platform (http://micc.tmu.edu.cn/mise/index.html).
+If you want to calculate MICI using multi-models, you can upload your model and extracted features to our platform (http://micc.tmu.edu.cn/mici/index.html).
 </blockquote>
 
 
