@@ -2,15 +2,19 @@
 
 if [ $# -lt 3 ]
   then
-  echo "Usage: $0 <subjects_dir> <labels> <subjlist> <outpath>"
-  echo "       <<subjects_dir: SUBJECTS_DIR where SBM running"
-  echo "       <<labels: CSV file defining the feature labels (see example)"
-  echo "       <<subjlist: text files containing subject IDs"
-  echo "       >>outpath: output file path (csv)"
+  echo "Usage:   $0 <subjects_dir> <labels> <subjlist> <outpath>"
+  echo "         << subjects_dir: SUBJECTS_DIR where SBM running"
+  echo "         << labels: CSV file defining the feature labels (see example)"
+  echo "         << subjlist: text files containing subject IDs"
+  echo "         >> outpath: output file path (csv)"
+  echo "Example: $0 /mnt/g/SBM/subjects /mnt/g/SBM/SBM_484_areas.csv /mnt/g/SBM/subjlist /mnt/g/SBM/features.csv"
+  echo "------Written by QinWen at 20220601(wayne.wenqin@gmail.com)------"
   exit 1
 fi
 
 
+dos2unix $2
+dos2unix $3
 export SUBJECTS_DIR=$1
 labels=$2
 subs=`cat $3`
@@ -31,6 +35,7 @@ echo "--subject list: $3"
 echo "--output: $outpath"
 # headline 
 nlab=`cat $labels|wc -l`
+echo ... Generate headline ...
 for n in `seq 2 $nlab`
   do
   areainfo=`sed -n ${n}p $labels`
@@ -40,13 +45,14 @@ for n in `seq 2 $nlab`
   labelname=`echo $areainfo|awk -F "," '{print $4}'` 
   if [ $n -eq 2 ]
     then
-    headline="SubjectID,$labelname"
+    headline="SubjectID,${labelname}"
     else
-    headline="$headline,$labelname"
+    headline="${headline},${labelname}"
   fi
 done
-echo $headline > $outpath
 
+echo $headline > $outpath
+echo ... Start Extract Features ...
 for s in $subs
   do
   subdir=$SUBJECTS_DIR/$s
@@ -81,19 +87,24 @@ for s in $subs
          ncol=4
          ;;
          SurfArea)
-         ncol=4
+         ncol=3
          ;;
          GrayVol)
-         ncol=5
+         ncol=4
          ;;
          ThickAvg)
-         ncol=6
+         ncol=5
          ;;
        esac
        val=`cat $atlasF|grep "\<$region\>"|awk '{print $'$ncol'}'`
+       if [ -z "$val" ]
+         then 
+          region=${region/_and_/&}
+          val=`cat $atlasF|grep "\<$region\>"|awk '{print $'$ncol'}'`
+       fi
     fi
     row="${row},$val"
   done
   echo $row >> $outpath 
-  echo ....subj: $s
+  echo ..Done subject: $s
 done
