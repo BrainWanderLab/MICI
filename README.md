@@ -1,5 +1,5 @@
 # MICI(Morphometric Integrated Classification Index)
-![mici1](https://user-images.githubusercontent.com/107779317/176885585-a967a5c1-d56f-4db9-becc-27e97f568294.png)
+![mici1](https://user-images.githubusercontent.com/107779317/176885585-a967a5c1-d56f-4db9-becc-27e97f568294.png)  
 
  
 ## 1.Theory
