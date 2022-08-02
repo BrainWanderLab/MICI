@@ -72,7 +72,7 @@ Copyright (c) BrainWanderLab@Tianjin Medical University 2018-2022. All rights re
 Please note some component score of MICI contains specific licence or usage constraints for non-academic usage. MICI does not grant the non-academic usage of those scores, so please contact the original score/method providers for proper usage purpose.
 
 ## Citation
-- [1] Morphometric Integrated Classification Index: A Multisite Model-based, Interpretable, Shareable and Evolvable biomarker for Schizophrenia
+- [1] Yingying Xie, Hao Ding, Xiaotong Du, Chao Chai, Xiaotong Wei, Jie Sun, Chuanjun Zhuo, Lina Wang, Jie Li, Hongjun Tian, Meng Liang, Shijie Zhang, Chunshui Yu, Wen Qin. Morphometric Integrated Classification Index: A Multisite Model-based, Interpretable, Shareable and Evolvable biomarker for Schizophrenia. Schizophrenia Bulletin, 2022.
 - [2] Chalkiadakis G, Elkind E, Wooldridge M. Computational aspects of cooperative game theory. Vol 5: Morgan & Claypool; 2011
 - [3]Lundberg SM, Lee S-I. A Unified Approach to Interpreting Model Predictions. 31st Conference on Neural Information Processing Systems (NIPS 2017). Long Beach, CA, USA.; 2017:1-10
  
