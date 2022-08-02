@@ -5,7 +5,7 @@
 ## 1.Theory
 
 Morphometric Integrated Classification Index (MICI) is a neuroimaging bimarker developed based on multi-site classification models using structural magnetic resonance imaging (sMRI) data$^1$. It is calculated using the SHapley Additive exPlanation (SHAP) method, which is based on the cooperative game theory$^2$ that measures the average marginal contribution of a feature value to the prediction across the total set of feature vectors$^3$. In mathematics, SHAP applies a linear additive model to split the final prediction of a classification model into individual additive contributions (SHAP values) for each valid feature. For a classification model, the relation between prediction probability and SHAP values can be expressed as the following equation:  
-[1] $$  logit(P_m)=S_0 + \sum_{f=1}^F {S_f}{X_f} $$              
+[1]  $$logit(P_m)=S_0 + \sum_{f=1}^F {S_f}{X_f}$$              
 
 Where $P_m$ is the prediction probability for a single model m; F is the feature number; $X_f ∈ (0,1)$ is an identifier of feature f, with "0" representing no contribution to the model, and "1" representing a valid contribution of this feature; $S_0$ is the intercept of the linear model (constant value); $S_f$ is the SHAP value of feature f.  
 
@@ -16,7 +16,7 @@ The most important property for SHAP value is the "local accuracy", meaning that
 Where p, f, and m represents subjects p, feature f, and model m; M represents the number of models; S represents the SHAP value; $X ∈(0,1)$ is a validity identifier of feature; b is the feature level contribution for intercept: $$b_m=S0_m\sum_{f=1}^F{X_fm }$$ and $w_m$ represents the sample size weight for model m: $$w_m=n_m⁄\sum_{m=1}^M{n_m }$$ 
 
 * (2) The participant-wise MICI values were calculated by aggregating the feature-wise MICI values of all valid features (equation [3]):  
-[3] $$ MICI_P= \sum_{m=1}^F{MICI_pm}$$            
+[3] $$MICI_P= \sum_{m=1}^F{MICI_pm}$$            
 
 Because the sum of the SHAP values plus constant S0 is equal to the logit function of the prediction probability in a single model (equation [3]), the relation between participant-wise MICI and the model's predicted probability also follows a logit function as shown in equation [4].  
 [4] $$P_{MICI}=\frac{1}\{(1+e^{(-MICI_p)}}$$                   
